@@ -1,0 +1,186 @@
+<html>
+<head>
+ <title>jfloatable Plugin</title>
+ <link rel=stylesheet href="stylesheets/main.css" type="text/css" media=screen>
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js" type="text/javascript"></script>
+ <script src="javascripts/jfloatable.js" type="text/javascript"></script>
+ 
+ <script type="text/javascript">
+  $(document).ready(function() {
+    $('.float1').jfloatable();
+  });
+ </script>
+ <style>
+ </style>
+</head>
+<body>
+  <div class="main">
+    <h1 class="header">jfloatable Plugin</h1>
+    <div class="content">
+      <h2>Information</h2>
+      <div class="information">
+        <p>
+          <i>Floating never was so easy!</i>
+        </p>
+        <p>
+          <strong>Website: </strong> <a href="http://rottgoth.github.com/jfloatable">Roberto Cataneo</a>
+        </p>
+        <p>
+          <strong>Author: </strong> <a href="http://github.com/rottgoth">Roberto Cataneo</a>
+        </p>
+        <p>
+          <strong>Version: </strong> 0.1.beta
+        </p>
+        <p>
+          <strong>License: </strong> <a href="http://www.opensource.org/licenses/gpl-license.php">GPL</a>
+        </p>
+        <p>
+          <strong>Source Code: </strong> <a href="https://github.com/rottgoth/jfloatable">Github</a>
+        </p>
+        <p>
+          jfloatable is a jQuery plugin allows you to have floating elements within an area, with a smooth and customizable movement when the window is scrolled.
+        </p>
+        <p>
+          The advantage of using jfloatable is the freedom of move your elements within a container as the page scroll, perfect for content that you want to be visible at all time.
+        </p>
+        <p>It's so easy to install and configure you'll have it working on your site in minutes! Just keep reading and find out how!</p>
+      </div>
+      <h2 class="closed">Installation</h2>
+      <div class="section installation hidden">
+        <h3>Step 1</h3>
+        <p>
+          Youn need to include a reference to the jQuery library and the Floatable plugin. <a href="http://code.jquery.com/jquery-latest.pack.js">You can download jquery from here</a> or making <a href="http://code.google.com/apis/libraries/devguide.html#jquery">reference to the one hosted by google</a>. And you can download jfloatable plugin from <a href="#">here</a>
+        </p>
+        <div class="code">
+          <p>&lt;head&gt;</p>
+          <p class="ident1">&lt;title&gt;jfloatable Plugin&lt;/title&gt;</p>
+           <p class="ident1">&lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js" type="text/javascript"&gt;&lt;/script&gt;</p>
+           <p class="ident1">&lt;script src="js/jfloatable.js" type="text/javascript"&gt;&lt;/script&gt;</p>
+           <p>&lt;/head&gt;</p>
+        </div>
+        <h3>Step 2</h3>
+        <p>
+          Place element to be floatable inside a container which would delimit the area where the element can move up and down.
+        </p>
+        <p>
+          <i>Note: The container has to be taller than the floating element for the plugin to work!</i>
+        </p>
+        <div class="code">
+          <p>&lt;div class="my-container"&gt;</p>
+          <p class="ident1">&lt;div class="my-floating-element"&gt;</p>
+          <p class="ident2">This content will float!</p>
+          <p class="ident1">&lt;/div&gt;</p>
+          <p>&lt;/div&gt;</p>
+        </div>
+        <h3>Step 3</h3>
+        <p>
+          Make a call to the jfloatable method selecting the element.
+        </p>
+        <p>
+          Start scrolling and see it in action!
+        </p>
+        <div class="code">
+          <p>&lt;script type="text/javascript"&gt;</p>
+          <p class="ident1">$(document).ready(function() {</p>
+           <p class="ident2">$('.my-floating-element').jfloatable();</p>
+           <p class="ident1">});</p>
+           <p>&lt;/script&gt;</p>
+        </div>
+      </div>
+      <h2 class="closed">Documentation</h2>
+      <div class="section documentation hidden">
+        <p>A basic floating effect can be set up as easy as just adding the following code.</p>
+        <div class="code">
+          <p>$('selector').jfloatable();</p>
+        </div>
+        <p>
+          Nevertheless, for this version (0.1), you have to consider the following for the plugin to work properly:
+        </p>
+        <ul>
+          <li>
+            The element should be visible in the page (not hidden or loaded after).
+          </li>
+          <li>
+            The container has to be taller than the element.
+          </li>
+          <li>
+            The scroll event for the window element is used in the plugin, binding it to a different action, would disable the plugin from working.
+          </li>
+        </ul>
+        <p>
+          It is possible to customize some options for the floating element by setting the following options:
+        </p>
+        <br />
+        <h3>container</h3>
+        <p>
+          The <strong>Container</strong> option allows you to specify the element (selector) which would delimit the movement of the floating element. It doesn't have to be the parent, but it would always have to be a direct ancestor of the element.
+        </p>
+        <p>
+          Default: the parent of the element.
+        </p>
+        <br />
+        <h3>marginTop</h3>
+        <p>
+          The <strong>marginTop</strong> option allows you the distance above the element that would persist when the window is being scrolled. If you want to apply a margin-top for you floating element, it is better to set it in this option.
+        </p>
+        <p>
+          Default: 0.
+        </p>
+        <br />
+        <h3>marginBottom</h3>
+        <p>
+          The <strong>marginBottom</strong> option is the distance below the element that would separate it from the bottom of the container. If you want to apply a margin-bottom for you floating element, it is better to set it in this option.
+        </p>
+        <p>
+          Default: 0.
+        </p>
+      </div>
+      <h2>Demo</h2>
+      <div class="demo">
+        <p>Keep scrolling and see the circles float and stop in each step!</p>
+        <div class="demo-container">
+          <div class="col1" style="background-color:#FFF;height:60px;width:120px;float:left;">
+            <div class="float1">1</div>
+          </div>
+          <div class="col2" style="background-color:#FFF;height:120px;width:120px;float:left;">
+            <div class="float1">2</div>
+          </div>
+          <div class="col3" style="background-color:#FFF;height:180px;width:120px;float:left;">
+            <div class="float1">3</div>
+          </div>
+          <div class="col4" style="background-color:#FFF;height:240px;width:120px;float:left;">
+            <div class="float1">4</div>
+          </div>
+          <div class="col5" style="background-color:#FFF;height:300px;width:120px;float:left;">
+            <div class="float1">5</div>
+          </div>
+          <div class="col5" style="background-color:#FFF;height:360px;width:120px;float:left;">
+            <div class="float1">6</div>
+          </div>
+        </div>
+        <h2 style="clear:both;">More Info</h2>
+        <div class="example">
+          <p>
+            Special thanks to Carlos Araoz Grageda for the good advices in the realization of this plugin.
+          </p>
+          <p>
+            TODO: What to put in here
+          </p>
+          <br />
+          <br />
+          <br />
+          <br />
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <p>
+        Jose Roberto Cataneo Samano | Agile Web Developer @ Crowd Interactive
+      </p>
+      <p>
+        roberto.cataneo@crowdint.com | Skype: rottgoth | Twitter: @Rottgoth | www.CrowdInt.com
+      </p>
+    </div>
+  </div>
+</body>
+</html>
