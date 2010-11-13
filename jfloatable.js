@@ -1,10 +1,10 @@
 /*
-    jFloatable Plugin  -  Floating never was so easy!
+    jfloatable Plugin  -  Floating never was so easy!
     ***********************************************************************
     Author:       Roberto Cataneo - http://github.com/rottgoth
     Version:      0.1.beta
     License:      GPL - http://www.opensource.org/licenses/gpl-license.php
-    Source Code:  Github - https://github.com/rottgoth/jFloatable
+    Source Code:  Github - https://github.com/rottgoth/jfloatable
 
 */
 
