@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>JFloatable</title>
+    <style>
+      body {
+        height: 3000px;
+      }
+      div.jfloatable {
+        float: right;
+        padding: 5px;
+        margin: 10px;
+        background-color: red;
+        height: 400px
+      }
+      div.main {
+        margin-top: 20px;
+        height: 500px;
+        width: 500px;
+        background-color: #666;
+      }
+      div.step {
+        display: inline-block;
+        width: 100px;
+        float: left;
+        background-color: #DDD;
+      }
+      div.step.one {
+        height: 100px
+      }
+      div.step.two {
+        height: 200px
+      }
+      div.step.three {
+        height: 300px
+      }
+      div.step.four {
+        height: 400px
+      }
+      div.step.five {
+        height: 500px
+      }
+      .floatee {
+        width: 20px;
+        height: 20px;
+        background-color: blue;
+        margin-left: 20px;
+        margin-right: 20px;
+        display: inline-block;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="jfloatable">JFLOATABLE</div>
+    <div class="main">
+      <div class="step one">
+        <div class="floatee"></div>
+      </div>
+      <div class="step two">
+        <div class="floatee"></div>
+      </div>
+      <div class="step three">
+        <div class="floatee"></div>
+      </div>
+      <div class="step four">
+        <div class="floatee"></div>
+      </div>
+      <div class="step five">
+        <div class="floatee"></div>
+      </div>
+
+    </div>
+    <script src="./src/jfloatable.js"></script>
+    <script>
+      jFloatable('.floatee');
+      jFloatable('.jfloatable', { marginTop: 0, marginBottom: 0 });
+    </script>
+  </body>
+</html>
